@@ -1,0 +1,9 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# runner = "probe-rs run --chip STM32WB55CGUX --speed 1000 --connect-under-reset"
+runner = "probe-rs run --chip STM32WB55CGUX --speed 1000"
+
+[build]
+target = "thumbv7em-none-eabihf"
+
+[env]
+DEFMT_LOG = "trace"
